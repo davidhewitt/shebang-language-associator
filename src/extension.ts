@@ -50,7 +50,7 @@ function checkFile(doc: vscode.TextDocument) {
     /*
      * Do nothing if the first line is not a shebang line.
      */
-    if (!shebang.text.startsWith("!#")) {
+    if (!shebang.text.startsWith("#!")) {
         return;
     }
 

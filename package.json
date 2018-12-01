@@ -2,7 +2,7 @@
     "name": "shebang-language-associator",
     "displayName": "Shebang Language Associator",
     "description": "A tiny extension to associate shebang lines with languages",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "davidhewitt",
     "repository": {
         "type" : "git",
