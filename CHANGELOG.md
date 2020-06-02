@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to the "shebang-language-associator" extension will be documented in this file.
 
+## [1.1.1]
+- Add LICENSE file
+
 ## [1.1.0]
 - Bump dependencies, add MIT license info.
 
