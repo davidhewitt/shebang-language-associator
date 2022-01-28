@@ -61,7 +61,7 @@ function checkFile(doc: vscode.TextDocument) {
     /*
      * Do nothing if the first line is not a shebang-like line.
      */
-    const match = acceptedPrefixes.find(prefix => shebang.text.startsWith(prefix));
+    const match = acceptedPrefixes.some(prefix => shebang.text.startsWith(prefix));
     if (!match) {
         return;
     }
