@@ -39,6 +39,17 @@ function checkAllFiles() {
     }
 }
 
+/**
+ * Accepted prefixes are:
+ * #! - shebang
+ * #compdef - zsh
+ * /// - POSIX path
+ */
+const acceptedPrefixes: Array<string> = [
+    "#!",
+    "#compdef",
+    "//",
+]
 
 /**
  * Check whether a file has a matching shebang, and apply the appropriate
@@ -48,9 +59,10 @@ function checkFile(doc: vscode.TextDocument) {
     let shebang = doc.lineAt(0);
 
     /*
-     * Do nothing if the first line is not a shebang line.
+     * Do nothing if the first line is not a shebang-like line.
      */
-    if (!shebang.text.startsWith("#!")) {
+    const match = acceptedPrefixes.some(prefix => shebang.text.startsWith(prefix));
+    if (!match) {
         return;
     }
 
