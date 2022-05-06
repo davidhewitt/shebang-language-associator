@@ -22,6 +22,11 @@ export function activate(context: vscode.ExtensionContext) {
      */
     disposable = vscode.workspace.onDidOpenTextDocument(checkFile);
     context.subscriptions.push(disposable);
+    /*
+     * And also when files are saved.
+     */
+    disposable = vscode.workspace.onDidSaveTextDocument(checkFile);
+    context.subscriptions.push(disposable);
 }
 
 /**
