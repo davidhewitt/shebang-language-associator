@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to the "shebang-language-associator" extension will be documented in this file.
 
+## [1.3.0]
+- The extension is activated upon saving files. In previous versions, the extension was only activated upon installation and when opening files.
+
 ## [1.2.0]
 - Add support for zsh and scripts run by the default shell (such as golang scripts).
 
