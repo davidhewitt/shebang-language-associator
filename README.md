@@ -9,7 +9,9 @@ Sets the VSCode lanaguage for a given file based on regex patterns for shebang l
 
 ## Extension Settings
 
-This extension only has one setting, which is the patterns to associate to given languages. For example:
+### `shebang.assocations`
+
+The patterns to associate to given languages. For example:
 
 ```json
 "shebang.associations": [
@@ -18,6 +20,14 @@ This extension only has one setting, which is the patterns to associate to given
         "language": "shellscript"
     }
 ]
+```
+
+### `shebang.associateOnSave`
+
+Whether to re-check shebang lines on file save (new in 1.3.0).
+
+```json
+"shebang.associations": true
 ```
 
 ## Release Notes
