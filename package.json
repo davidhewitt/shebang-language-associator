@@ -47,6 +47,11 @@
             }
           ],
           "description": "Shebang patterns to associate languages to."
+        },
+        "shebang.associateOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to check shebang and update the file type on save."
         }
       }
     }

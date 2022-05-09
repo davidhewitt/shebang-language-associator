@@ -25,7 +25,15 @@ export function activate(context: vscode.ExtensionContext) {
     /*
      * And also when files are saved.
      */
-    disposable = vscode.workspace.onDidSaveTextDocument(checkFile);
+    disposable = vscode.workspace.onDidSaveTextDocument((doc) => {
+      if (
+        vscode.workspace
+          .getConfiguration("shebang")
+          .get<boolean>("associateOnSave")
+      ) {
+        checkFile(doc);
+      }
+    });
     context.subscriptions.push(disposable);
 }
 
