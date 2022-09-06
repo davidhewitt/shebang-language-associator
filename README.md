@@ -32,4 +32,4 @@ Whether to re-check shebang lines on file save (new in 1.3.0).
 
 ## Release Notes
 
-See [CHANGELOG.md]
+See [CHANGELOG.md](./CHANGELOG.md)
